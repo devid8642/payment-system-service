@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from payment_system_service.api.main import app
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', app.urls),
 ]

@@ -30,5 +30,5 @@ addopts = '-p no:warnings'
 asyncio_default_fixture_loop_scope = 'function'
 
 [tool.taskipy.tasks]
-run = 'python manage.py runserver'
+run = 'uvicorn payment_system_service.asgi:application --reload'
 test = 'pytest -x -vv'
